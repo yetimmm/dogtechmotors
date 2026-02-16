@@ -3,143 +3,218 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dogtech Motors | Luxury Car Dealership</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Dogtech Motors | Luxury Cars North Cyprus</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+body{
+margin:0;
+font-family:Montserrat;
+background:#0b0b0b;
+color:white;
 }
 
-body {
-background: #0a0a0a;
-color: white;
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:black;
+position:sticky;
+top:0;
+z-index:999;
 }
 
-header {
-background: black;
-padding: 20px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-border-bottom: 1px solid #222;
+.logo{
+
+font-size:26px;
+font-weight:700;
+color:#d4af37;
+
 }
 
-.logo {
-font-size: 24px;
-font-weight: 600;
-color: gold;
+nav a{
+
+color:white;
+margin-left:30px;
+text-decoration:none;
+font-weight:500;
+
 }
 
-nav a {
-color: white;
-text-decoration: none;
-margin-left: 20px;
-transition: 0.3s;
+nav a:hover{
+
+color:#d4af37;
+
 }
 
-nav a:hover {
-color: gold;
+.hero{
+
+height:85vh;
+background:url("https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=2070") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
 }
 
-.hero {
-height: 70vh;
-background: url('https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?q=80&w=1920') center/cover;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
+.hero h1{
+
+font-size:60px;
+margin:0;
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
+
 }
 
-.hero h1 {
-font-size: 50px;
-background: rgba(0,0,0,0.6);
-padding: 20px;
-border-radius: 10px;
+.hero p{
+
+color:#ccc;
+
 }
 
-.section {
-padding: 60px 10%;
+.section{
+
+padding:80px 60px;
+
 }
 
-.section h2 {
-margin-bottom: 30px;
-color: gold;
+.section h2{
+
+color:#d4af37;
+margin-bottom:40px;
+
 }
 
-.cars {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 25px;
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
 }
 
-.car {
-background: #111;
-border-radius: 10px;
-overflow: hidden;
-transition: 0.3s;
+.card{
+
+background:#111;
+border-radius:10px;
+overflow:hidden;
+transition:0.3s;
+
 }
 
-.car:hover {
-transform: scale(1.03);
+.card:hover{
+
+transform:translateY(-10px);
+
 }
 
-.car img {
-width: 100%;
-height: 180px;
-object-fit: cover;
+.card img{
+
+width:100%;
+height:200px;
+object-fit:cover;
+
 }
 
-.car-info {
-padding: 15px;
+.card-content{
+
+padding:20px;
+
 }
 
-.car-info h3 {
-margin-bottom: 5px;
+.price{
+
+color:#d4af37;
+font-weight:700;
+margin-top:10px;
+
 }
 
-.car-info p {
-color: #aaa;
+button{
+
+margin-top:15px;
+padding:10px;
+width:100%;
+border:none;
+background:#d4af37;
+font-weight:700;
+cursor:pointer;
+
 }
 
-.about {
-max-width: 700px;
-line-height: 1.6;
+button:hover{
+
+background:white;
+
 }
 
-footer {
-text-align: center;
-padding: 20px;
-background: black;
-border-top: 1px solid #222;
-margin-top: 40px;
+.about{
+
+max-width:700px;
+
+color:#bbb;
+
 }
 
-button {
-margin-top: 10px;
-padding: 10px;
-width: 100%;
-border: none;
-background: gold;
-color: black;
-font-weight: bold;
-cursor: pointer;
-border-radius: 5px;
+.contact{
+
+color:#bbb;
+
 }
 
-button:hover {
-background: white;
+footer{
+
+background:black;
+text-align:center;
+padding:30px;
+margin-top:50px;
+
+}
+
+.modal{
+
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+
+}
+
+.modal-content{
+
+background:#111;
+padding:30px;
+border-radius:10px;
+max-width:400px;
+
+}
+
+.close{
+
+cursor:pointer;
+color:red;
+float:right;
+
 }
 
 </style>
-
 </head>
+
+
 <body>
+
 
 <header>
 
@@ -147,171 +222,195 @@ background: white;
 
 <nav>
 
-<a href="#forsale">For Sale</a>
+<a href="#sale">For Sale</a>
 
 <a href="#upcoming">Upcoming</a>
 
-<a href="#about">About Us</a>
+<a href="#about">About</a>
+
+<a href="#contact">Contact</a>
 
 </nav>
 
 </header>
 
 
+
 <div class="hero">
 
-<h1>Luxury Cars in North Cyprus</h1>
+<h1>Dogtech Motors</h1>
+
+<p>Luxury & Exotic Cars in North Cyprus</p>
 
 </div>
 
 
-<section class="section" id="forsale">
 
-<h2>Cars For Sale</h2>
+<section class="section" id="sale">
 
-<div class="cars">
+<h2>For Sale</h2>
 
-<div class="car">
-
-<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e">
-
-<div class="car-info">
-
-<h3>Mercedes S580</h3>
-
-<p>2023 • 503 HP • Automatic</p>
-
-<button>View Details</button>
-
-</div>
-
-</div>
+<div class="grid">
 
 
-<div class="car">
+<div class="card">
 
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8">
 
-<div class="car-info">
+<div class="card-content">
 
-<h3>BMW M4 Competition</h3>
+<h3>Mercedes AMG GT</h3>
 
-<p>2022 • 510 HP • Automatic</p>
+<div class="price">£145,000</div>
 
-<button>View Details</button>
+<button onclick="openModal('Mercedes AMG GT')">View</button>
 
 </div>
 
 </div>
 
 
-<div class="car">
 
-<img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+<div class="card">
 
-<div class="car-info">
+<img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537">
 
-<h3>Porsche 911 Turbo</h3>
+<div class="card-content">
 
-<p>2021 • 572 HP • Automatic</p>
+<h3>BMW M8 Competition</h3>
 
-<button>View Details</button>
+<div class="price">£132,000</div>
+
+<button onclick="openModal('BMW M8')">View</button>
 
 </div>
 
 </div>
+
 
 </div>
 
 </section>
+
+
 
 
 <section class="section" id="upcoming">
 
-<h2>Upcoming Cars</h2>
+<h2>Upcoming</h2>
 
-<div class="cars">
+<div class="grid">
 
-<div class="car">
 
-<img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888">
+<div class="card">
 
-<div class="car-info">
+<img src="https://images.unsplash.com/photo-1621135802920-133df287f89c">
+
+<div class="card-content">
 
 <h3>Ferrari SF90</h3>
 
-<p>Coming Soon</p>
+<div class="price">Coming Soon</div>
 
-<button>Notify Me</button>
-
-</div>
-
-</div>
-
-
-<div class="car">
-
-<img src="https://images.unsplash.com/photo-1617654112368-307921291f42">
-
-<div class="car-info">
-
-<h3>Lamborghini Revuelto</h3>
-
-<p>Coming Soon</p>
-
-<button>Notify Me</button>
+<button>Coming Soon</button>
 
 </div>
 
 </div>
+
 
 </div>
 
 </section>
+
+
 
 
 <section class="section" id="about">
 
-<h2>About Dogtech Motors</h2>
+<h2>About</h2>
 
 <div class="about">
 
-<p>
+Dogtech Motors is a luxury dealership in North Cyprus specialising in exotic and premium vehicles.
 
-Dogtech Motors is a luxury car dealership located in North Cyprus.  
-
-We specialize in premium, exotic, and high-performance vehicles.
-
-</p>
-
-<br>
-
-<p>
-
-Our mission is to provide exclusive cars with exceptional service and trust.
-
-</p>
-
-<br>
-
-<p>
-
-Whether you are looking for your dream car or your next investment,
-
-Dogtech Motors delivers excellence.
-
-</p>
+We provide exclusive cars with trust and professionalism.
 
 </div>
 
 </section>
 
 
+
+
+<section class="section" id="contact">
+
+<h2>Contact</h2>
+
+<div class="contact">
+
+Email: dogtechmotors@gmail.com
+
+<br><br>
+
+Instagram: @dogtechmotors
+
+<br><br>
+
+Location: North Cyprus
+
+</div>
+
+</section>
+
+
+
+
 <footer>
 
-<p>© 2026 Dogtech Motors. All Rights Reserved.</p>
+Dogtech Motors © 2026
 
 </footer>
+
+
+
+
+<div class="modal" id="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">X</span>
+
+<h2 id="carName"></h2>
+
+<p>Contact Dogtech Motors for more information.</p>
+
+</div>
+
+</div>
+
+
+
+
+<script>
+
+function openModal(name){
+
+document.getElementById("modal").style.display="flex";
+
+document.getElementById("carName").innerText=name;
+
+}
+
+
+function closeModal(){
+
+document.getElementById("modal").style.display="none";
+
+}
+
+</script>
+
 
 
 </body>
